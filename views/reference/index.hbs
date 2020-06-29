@@ -1,0 +1,32 @@
+<h4>Reference</h4>
+<div class="row">
+    {{#each reference}}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    {{!-- todo: edit icon --}}
+                </div>
+                <div class="card-content center-align">
+
+                    <div class="section">
+                        <p>{{description}}</p>
+                    </div>
+
+                    <div class="section">
+                        <p>Link: <a href="{{url}}" class="teal-text">{{url}}</a></p>
+                    </div>
+
+                    <div class="chip">
+                        <img src="{{user.image}}" alt="user image">
+                        <a href="/reference/user/{{user._id}}">{{user.displayName}}</a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/reference/{{_id}}" class="btn grey">Read more</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <p>No reference posted...</p>
+    {{/each}}
+</div>

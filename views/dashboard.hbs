@@ -1,0 +1,27 @@
+<h5>Welcome <span class="teal-text">{{name}}</span>.</h5>
+<h6>Dashboard</h6>
+
+{{#if reference}}
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Created at</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each reference}}
+            <tr>
+                <td><a href="/stories/{{_id}}"></a>{{description}}</td>
+                <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                <td><span class="dash-status">{{status}}</span></td>
+                <td></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>You haven't posted anything yet.</p>
+{{/if}}

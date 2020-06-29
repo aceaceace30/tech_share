@@ -1,0 +1,34 @@
+<h5 class="teal-text">Add Reference</h5>
+<div class="row">
+    <form action="/reference/" method="POST" class="col s12">
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="url" id="url">
+                <label for="url">Link</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <select name="status" id="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Description:</h5>
+                <textarea name="description" id="description"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn teal">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+
+    </form>
+</div>
